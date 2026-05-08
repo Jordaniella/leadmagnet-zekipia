@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #050606;
+  color: #fff;
+}
+
+::selection {
+  background: rgba(183, 249, 50, 0.28);
+  color: #fff;
+}
+
+@layer utilities {
+  .glass-card {
+    @apply border border-white/10 bg-white/[0.055] shadow-card backdrop-blur-xl;
+  }
+
+  .lime-gradient-text {
+    @apply bg-gradient-to-r from-white via-limefit-50 to-limefit-300 bg-clip-text text-transparent;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-limefit-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
+  }
+}
